@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+/* img styling section */
+.wide {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+.small {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+/* img styling section */
+
+/* accordion styling section */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  width: 40vw;
+  margin: 10% auto;
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px black;
+}
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.7rem 0 0.7rem;
+  font-size: 22px;
+  text-align: left;
+  margin: 0.5rem 1rem;
+  border: none;
+  color: hsl(292, 42%, 14%);
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  font-weight: 600;
+}
+.question img {
+  /* padding-bottom: 2px;
+  padding-left: 2px; */
+  padding: 1rem 0 1rem 1rem;
+  width: auto;
+  height: auto;
+}
+.question:hover {
+  color: hsl(0, 0%, 21%);
+}
+.answer {
+  display: none;
+  padding: 0 0.7rem 0 0.7rem;
+  font-weight: 400;
+  font-size: 16px;
+  color: hsl(276, 91%, 71%);
+}
+h2 {
+  color: hsl(292, 42%, 14%);
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  font-size: 3rem;
+  padding-top: 10px;
+  width: 100%;
+  font-weight: 800;
+}
+h2 img {
+  display: inline-block;
+  margin-right: 1.5vw;
+}
+
+.icon-plus {
+  display: block;
+  padding-left: 2vw;
+}
+.icon-minus {
+  display: none;
+}
+/* accordion styling section */
+.attribution {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Adding Media Queris
+ */
+@media screen and (max-width: 375px) {
+  .wide {
+    display: none;
+  }
+  .small {
+    display: block;
+  }
+  .accordion {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .accordion {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .accordion {
+    width: 70%;
+  }
+}
